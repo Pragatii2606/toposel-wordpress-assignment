@@ -1,0 +1,158 @@
+/*
+Theme Name: Shopperzz Mobile
+Author: You
+Version: 1.0
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* mobile app style wrapper */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6; /* light grey background like many apps */
+  padding-top: 50px; /* space for fixed header bar */
+}
+
+/* fixed header bar showing site name shopperzz */
+body::before {
+  content: "shopperzz";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Announcement bar */
+.announcement-bar {
+  background: #ffebc2;
+  color: #333;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+/* Hero */
+.hero {
+  padding: 20px 10px;
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.hero img {
+  width: 80%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 16px;
+}
+
+.hero .hero-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.hero .hero-btn:hover {
+  background: #e65b50;
+}
+
+/* Brands (logo carousel) */
+.brands {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 20px 10px;
+  background: #fff;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+.brands::-webkit-scrollbar { display: none; }
+.brands { -ms-overflow-style: none; scrollbar-width: none; }
+
+.brands img {
+  width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.brands img:hover {
+  filter: grayscale(0%);
+}
+
+/* New Arrivals */
+.new-arrivals {
+  background: #fff;
+  padding-bottom: 20px;
+}
+.new-arrivals h2 {
+  font-size: 24px;
+  margin: 16px 10px 0;
+  color: #222;
+}
+
+/* slider container: horizontal scroll */
+.new-arrivals .products {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+.new-arrivals .products::-webkit-scrollbar { display: none; }
+.new-arrivals .products { -ms-overflow-style: none; scrollbar-width: none; }
+
+.new-arrivals .product-card {
+  flex: 0 0 160px;
+  background: #fafafa;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12);
+}
+
+.new-arrivals .product-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px;
+  border-radius: 6px;
+}
+
+/* If you prefer wrap layout on very small screens */
+@media (max-width: 480px) {
+  .new-arrivals .products { flex-wrap: wrap; }
+}
+
